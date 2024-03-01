@@ -55,3 +55,6 @@ Code-verse is licensed under the [MIT License](LICENSE), which means you are fre
 ---
 
 Thank you for choosing Code-verse! We hope you find our blog posts informative and engaging. If you have any questions or feedback, please don't hesitate to contact us.
+https://github.com/Jakobytk
+https://github.com/KKBellew
+https://github.com/KristoferVickers 
