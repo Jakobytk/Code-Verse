@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
