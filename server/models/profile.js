@@ -25,6 +25,12 @@ const profileSchema = new Schema({
       trim: true,
     },
   ],
+  thoughts: [
+    {
+      type : Schema.Types.ObjectId,
+      ref: "Thought",
+    },
+  ],
 });
 
 // set up pre-save middleware to create password

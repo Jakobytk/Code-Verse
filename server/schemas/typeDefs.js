@@ -1,6 +1,6 @@
 const typeDefs = `
   type Profile {
-    _id: ID
+    _id: ID!
     name: String!
     email: String!
     password: String!
@@ -13,7 +13,8 @@ const typeDefs = `
   }
 
   type Thought {
-    _id: ID
+    _id: ID!
+    name: String!
     thought: String!
   }
 
@@ -22,7 +23,8 @@ const typeDefs = `
     profile(profileId: ID!): Profile
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: Profile
-    thoughts: [thought]!
+    thoughts: [Thought]!
+    Thoughts(thoughtId: ID!): Thought
   }
 
   type Mutation {
@@ -33,7 +35,8 @@ const typeDefs = `
     removeProfile: Profile
     removeSkill(skill: String!): Profile
 
-    addThought(profileId: ID!, thought: String!): Profile
+    addThought(thoughtId: ID!, thought: String!): Profile
+    removeThought(thought: String!): Thought
   }
 `;
 
