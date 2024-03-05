@@ -17,6 +17,9 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+    thoughts: async () => {
+      return Thought.find();
+    }
   },
 
   Mutation: {
@@ -79,6 +82,18 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+
+    addThought: async (parent, { profileId, thought }, context) => {
+      if (context.user) {
+        return Thought.findOneAndUpdate(
+          { _id: profileId },
+          { $addToSet: { thoughts: thought} },
+          {
+            new: true,
+          }
+        )
+      }
+    }
   },
 };
 
