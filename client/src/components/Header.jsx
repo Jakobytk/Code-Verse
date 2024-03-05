@@ -1,17 +1,22 @@
 import React from 'react';
+import NavBar from './NavBar';
+import './Header.css'; 
 
 const Header = () => {
-  return (
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/new-post">New Post</a>
-        <a href="/profile">Profile</a>
-        <a href="/login">Login</a>
-      </nav>
-      <div className="logo">CodeVerse</div>
-    </header>
-  );
-};
+    return (
+        <header>
+            <NavBar />
+            <div className="dropdown">
+                <button className="dropbtn">&#128070; GitHub</button>
+                <div className="dropdown-content">
+                    <a href="https://github.com/Jakobytk">Jacob's GitHub</a>
+                    <a href="https://github.com/KKBellew">KKBellew's GitHub</a>
+                    <a href="https://github.com/KristoferVickers">Kristofer's GitHub</a>
+                </div>
+            </div>
+            <div className="logo">CodeVerse</div>
+        </header>
+    );
+}
 
 export default Header;
