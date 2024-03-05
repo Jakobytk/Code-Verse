@@ -83,17 +83,29 @@ const resolvers = {
       throw AuthenticationError;
     },
 
-    addThought: async (parent, { profileId, thought }, context) => {
+    addThought: async (parent, { thoughtId, thought }, context) => {
       if (context.user) {
         return Thought.findOneAndUpdate(
-          { _id: profileId },
+          { _id: thoughtId },
           { $addToSet: { thoughts: thought} },
           {
             new: true,
           }
         )
       }
-    }
+      throw  AuthenticationError("You need to be logged in to do that.")
+    },
+
+    removeThought: async ( parent, { thought }, context ) => {
+      if (context.user) {
+        return Thought.findByIdAndDelete(
+          { _id: context.user._id },
+          { $pull: { thoughts: { _id: thought } } },
+          { new: true, }
+        )
+      }
+      throw new AuthenticationError('Not authorized!')
+    },
   },
 };
 
