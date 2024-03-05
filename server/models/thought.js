@@ -1,8 +1,7 @@
 const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
 
 const thoughtSchema = new Schema({
-    thought: {
+    thoughts: {
         type: String,
         required: true,
         unique: true,
@@ -12,4 +11,4 @@ const thoughtSchema = new Schema({
 
 const Thought = model('Thought', thoughtSchema);
 
-model.exports = Thought;
+module.exports = Thought;
