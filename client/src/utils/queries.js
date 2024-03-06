@@ -5,6 +5,8 @@ const typeDefs = gql`
     profiles: [Profile]!
     profile(profileId: ID!): Profile
     me: Profile
+    thoughts: [Thought]!
+    thought(thoughtId: ID!): Thought!
   }
 `;
 

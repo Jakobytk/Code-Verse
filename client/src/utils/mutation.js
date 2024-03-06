@@ -7,6 +7,8 @@ const typeDefs = gql`
     addSkill(profileId: ID!, skill: String!): Profile
     removeProfile: Profile
     removeSkill(skill: String!): Profile
+    addThought(thoughtId: ID!, thought: String!): Profile
+    removeThought(thought: String!): Thought
   }
 `;
 

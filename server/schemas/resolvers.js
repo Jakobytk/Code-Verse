@@ -19,6 +19,9 @@ const resolvers = {
     },
     thoughts: async () => {
       return Thought.find();
+    },
+    thought: async (thoughtId) => {
+      return Thought.findOne({ _id: thoughtId})
     }
   },
 
