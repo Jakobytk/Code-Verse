@@ -1,13 +1,11 @@
-import React from 'react';
-import '/src/App.css';
-
-const NavBar = () => {
+const NavBar = ({ onPageChange }) => {
     return (
         <nav>
-            <a href="#">Blog</a>
-            <a href="#">Search</a>
-            <a href="#">Merch</a>
-            <a href="#">Extra</a>
+            <ul>
+                <li onClick={() => onPageChange('homepage')}>HomePage</li>
+                <li onClick={() => onPageChange('login')}>Login</li>
+                <li onClick={() => onPageChange('profile')}>ProfilePage</li>
+            </ul>
         </nav>
     );
 }
