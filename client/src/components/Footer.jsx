@@ -1,10 +1,9 @@
 import React from 'react';
-import './Footer.css'; // Import the styles for the footer component
-
+import '/src/App.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             As a coding enthusiast seeking inspiration and connection with the developer community, I want to explore and contribute to the CodeVerse platform.
         </footer>
     );
