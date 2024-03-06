@@ -1,4 +1,6 @@
-export const PROFILES = `
+import { gql } from '@apollo/client';
+
+export const PROFILES = gql`
   query profiles {
     profiles {
       _id
@@ -9,7 +11,7 @@ export const PROFILES = `
   }
 `;
 
-export const PROFILE = `
+export const PROFILE = gql`
   query profile($profileId: ID!) {
     profile(profileId: $profileId) {
       _id
@@ -20,7 +22,7 @@ export const PROFILE = `
   }
 `;
 
-export const ME = `
+export const ME = gql`
   query me {
     me {
       _id
@@ -31,7 +33,7 @@ export const ME = `
   }
 `;
 
-export const THOUGHTS = `
+export const THOUGHTS = gql`
   query thoughts {
     thoughts {
       _id
@@ -41,7 +43,7 @@ export const THOUGHTS = `
   }
 `;
 
-export const THOUGHT = `
+export const THOUGHT = gql`
   query thought($thoughtId: ID!) {
     thought(thoughtId: $thoughtId) {
       _id
