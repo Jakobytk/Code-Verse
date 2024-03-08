@@ -1,11 +1,54 @@
-const { gql } = require('apollo-server-express');
+import { gql } from '@apollo/client';
 
-const typeDefs = gql`
-  type Query {
-    profiles: [Profile]!
-    profile(profileId: ID!): Profile
-    me: Profile
+export const PROFILES = gql`
+  query profiles {
+    profiles {
+      _id
+      name
+      email
+      skills
+    }
   }
 `;
 
-module.exports = typeDefs;
+export const PROFILE = gql`
+  query profile($profileId: ID!) {
+    profile(profileId: $profileId) {
+      _id
+      name
+      email
+      skills
+    }
+  }
+`;
+
+export const ME = gql`
+  query me {
+    me {
+      _id
+      name
+      email
+      skills
+    }
+  }
+`;
+
+export const THOUGHTS = gql`
+  query thoughts {
+    thoughts {
+      _id
+      name
+      thought
+    }
+  }
+`;
+
+export const THOUGHT = gql`
+  query thought($thoughtId: ID!) {
+    thought(thoughtId: $thoughtId) {
+      _id
+      name
+      thought
+    }
+  }
+`;

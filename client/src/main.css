@@ -1,0 +1,123 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #555;
+}
+
+.main-content {
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.start-blogging-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.start-blogging-btn:hover {
+    background-color: #0056b3;
+}
+
+.app-container {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .main-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }

@@ -1,12 +1,15 @@
 const { Schema, model } = require('mongoose');
 
 const thoughtSchema = new Schema({
-    thoughts: {
+    name: {
         type: String,
         required: true,
-        unique: true,
-        minlength: 1,
+        trim: true,
     },
+    Thoughts: {
+        type: String,
+        require: true,
+    }
 });
 
 const Thought = model('Thought', thoughtSchema);
