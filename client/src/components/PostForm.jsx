@@ -6,6 +6,7 @@ import { ADD_THOUGHT } from '../utils/mutation';
 import { QUERY_THOUGHTS, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
+import './PostForm.css';
 
 const ThoughtForm = () => {
   const [thoughtText, setThoughtText] = useState('');
@@ -49,7 +50,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
+      <h3>Post Here</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -88,9 +89,9 @@ const ThoughtForm = () => {
           </form>
         </>
       ) : (
-        <p>
+        <p className='Login-p'>
           You need to be logged in to share your thoughts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <Link className='Login-Link' to="/login">login</Link> or <Link className='Login-Link' to="/signup">signup.</Link>
         </p>
       )}
     </div>
