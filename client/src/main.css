@@ -122,3 +122,6 @@ nav a {
     padding: 20px;
   }
 
+.card-header {
+    color: black;
+}
