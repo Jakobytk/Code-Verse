@@ -1,23 +1,45 @@
-import React from 'react';
-import NavBar from  './NavBar';
+import { Link } from 'react-router-dom';
+ 
+import Auth from '../utils/auth';
 
-const Header = ({onPageChange}) => {
-    return (
-        <header>
-            <nav>
-                <a href="#" className="logo">CodeVerse</a>
-                <div className="dropdown">
-                    <button className="dropbtn">Menu</button>
-                    <div className="dropdown-content">
-                        <NavBar onPageChange={onPageChange} />
-                        <a href="https://github.com/Jakobytk">Jacob's GitHub</a>
-                        <a href="https://github.com/KKBellew">KKBellew's GitHub</a>
-                        <a href="https://github.com/KristoferVickers">Kristofer's GitHub</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    );
+const Header = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+  return (
+    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+      <div className="container flex-row justify-space-between-lg justify-center align-center">
+        <div>
+          <Link className="text-light" to="/">
+            <h1 className="m-0">Tech Thoughts</h1>
+          </Link>
+          <p className="m-0">Get into the mind of a programmer.</p>
+        </div>
+        <div>
+          {Auth.loggedIn() ? (
+            <>
+              <Link className="btn btn-lg btn-info m-2" to="/me">
+                {Auth.getProfile().authenticatedPerson.username}'s profile
+              </Link>
+              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="btn btn-lg btn-info m-2" to="/login">
+                Login
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/signup">
+                Signup
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default Header;
