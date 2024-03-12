@@ -4,3 +4,7 @@
     padding: 20px;
     margin-top: 20px;
   }
+
+.page-height {
+  min-height: 100vh;
+}

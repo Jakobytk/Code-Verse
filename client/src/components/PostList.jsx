@@ -12,7 +12,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
 
-  const [removeThought,  {}] = useMutation(REMOVE_THOUGHT, {
+  const [removeThought,  {} ] = useMutation(REMOVE_THOUGHT, {
     refetchQueries: [
       QUERY_THOUGHTS,
       'getThoughts',
@@ -40,8 +40,8 @@ const ThoughtList = ({
       {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+          <div key={thought._id} className="card-mb-3">
+            <h4 className="card-header">
               {showUsername ? (
                 <Link
                   className="text-light"
@@ -69,8 +69,9 @@ const ThoughtList = ({
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
+              style={{border: '1px dotted #ccc', padding: '0.2rem'}}
             >
-              Join the discussion on this thought.
+              Leave Comment 
             </Link>
           </div>
         ))}

@@ -1,8 +1,8 @@
-import { useMutation } from '@apollo/client';
-import { REMOVE_COMMENT } from '../utils/mutation';
-import { QUERY_USER, QUERY_THOUGHTS, QUERY_ME } from '../utils/queries';
+// import { useMutation } from '@apollo/client';
+// import { REMOVE_COMMENT } from '../utils/mutation';
+// import { QUERY_USER, QUERY_THOUGHTS, QUERY_ME } from '../utils/queries';
 
-import Auth from '../utils/auth';
+// import Auth from '../utils/auth';
 import './CommentList.css';
 
 const CommentList = ({ comments = [] }) => {
@@ -37,7 +37,7 @@ const CommentList = ({ comments = [] }) => {
         className="p-5"
         style={{ borderBottom: '2px solid #1a1a1a' }}
         >
-          No Comments Yet
+          No Comments
         </h3>;
   }
 
