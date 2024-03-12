@@ -22,13 +22,21 @@ const ThoughtForm = () => {
     ]
   });
 
+  // const [removeThought,  {}] = useMutation(REMOVE_THOUGHT, {
+  //   refetchQueries: [
+  //     QUERY_THOUGHTS,
+  //     'getThoughts',
+  //     QUERY_ME,
+  //     'me'
+  //   ]
+  // })
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = await addThought({
         variables: {
           thoughtText,
-          // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
           thoughtAuthor: Auth.getProfile().authenticatedPerson.username
         },
       });
@@ -47,6 +55,16 @@ const ThoughtForm = () => {
       setCharacterCount(value.length);
     }
   };
+
+  // const handleRemoveThought = async (thoughtId) => {
+  //   try {
+  //     await removeThought({
+  //       variables: { thoughtId }
+  //     }); 
+  //   } catch {
+  //     console.log(err);
+  //   }
+  // };
 
   return (
     <div>
@@ -68,10 +86,10 @@ const ThoughtForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="thoughtText"
-                placeholder="Here's a new thought..."
+                placeholder="New Post"
                 value={thoughtText}
                 className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ lineHeight: '1.5', resize: 'vertical', height: '100px', width: '500px'}}
                 onChange={handleChange}
               ></textarea>
             </div>
