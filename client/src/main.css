@@ -1,7 +1,7 @@
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -14,15 +14,16 @@ header {
 
 nav {
     display: flex;
+    justify-content: center;
 }
 
 nav a {
-    margin-right: 10px;
+    margin:0 10px;
     color: #fff;
     text-decoration: none;
 }
 
-.dropdown {
+/* .dropdown { 
     position: relative;
     display: inline-block;
     margin-right: 10px;
@@ -62,7 +63,7 @@ nav a {
 
 .dropbtn:hover {
     background-color: #555;
-}
+}*/
 
 .main-content {
     background-size: cover;
@@ -111,10 +112,6 @@ nav a {
     padding: 10px 20px;
   }
   
-.main-content {
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
   
 .footer {
     background-color: #333;
