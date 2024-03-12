@@ -1,41 +1,5 @@
-.form-container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-  }
-  
-  .form-group input:focus {
-    border-color: #007bff;
-  }
-  
-  .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-btn:hover {
-    background-color: #0056b3;
-  }
+.form-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 3px;
+}

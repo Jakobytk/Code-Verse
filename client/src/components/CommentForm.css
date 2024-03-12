@@ -8,3 +8,8 @@
 .page-height {
   min-height: 100vh;
 }
+
+.logo-login {
+  color: black;
+  font-size: 20px;
+}

@@ -76,8 +76,8 @@ const CommentForm = ({ thoughtId }) => {
         </>
       ) : (
         <p>
-          You need to be logged in. Please{' '}
-          <Link className='logo' to="/login">login</Link> or <Link className='logo' to="/signup">Sign Up.</Link>
+          You need to be logged in. Please{''}
+          <Link className='logo logo-login' to="/login">login</Link>or<Link className='logo logo-login' to="/signup">Sign Up.</Link>
         </p>
       )}
     </div>
