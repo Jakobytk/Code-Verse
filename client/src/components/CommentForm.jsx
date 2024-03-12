@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../utils/mutation';
 
 import Auth from '../utils/auth';
+import './CommentForm.css';
 
 const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
@@ -40,7 +41,7 @@ const CommentForm = ({ thoughtId }) => {
 
   return (
     <div>
-      <h4>Comment</h4>
+      <h4 className='comment-header'>Comment</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -53,22 +54,22 @@ const CommentForm = ({ thoughtId }) => {
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div>
               <textarea
                 name="commentText"
                 placeholder="Add your comment..."
                 value={commentText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input comment-textarea"
+                style={{ lineHeight: '1.5', resize: 'vertical', height: '100px', width: '800px'}}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div>
+              <button className="btn-Comment" type="submit">
                 Add Comment
               </button>
             </div>
@@ -77,7 +78,7 @@ const CommentForm = ({ thoughtId }) => {
       ) : (
         <p>
           You need to be logged in. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">Sign Up.</Link>
+          <Link className='logo' to="/login">login</Link> or <Link className='logo' to="/signup">Sign Up.</Link>
         </p>
       )}
       {/* Container around comments */}

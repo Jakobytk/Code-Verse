@@ -1,3 +1,7 @@
+:root {
+    
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -15,6 +19,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 nav a {
@@ -73,6 +78,8 @@ nav a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: white;
+    padding: 20px;
 }
 
 .title {
@@ -111,7 +118,6 @@ nav a {
     color: #fff;
     padding: 10px 20px;
   }
-  
   
 .footer {
     background-color: #333;
