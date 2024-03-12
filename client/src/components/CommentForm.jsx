@@ -80,6 +80,10 @@ const CommentForm = ({ thoughtId }) => {
           <Link to="/login">login</Link> or <Link to="/signup">Sign Up.</Link>
         </p>
       )}
+      {/* Container around comments */}
+      <div className="comments-container">
+        {/* Add your comments component here */}
+      </div>
     </div>
   );
 };
