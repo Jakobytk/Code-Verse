@@ -22,15 +22,6 @@ const ThoughtForm = () => {
     ]
   });
 
-  // const [removeThought,  {}] = useMutation(REMOVE_THOUGHT, {
-  //   refetchQueries: [
-  //     QUERY_THOUGHTS,
-  //     'getThoughts',
-  //     QUERY_ME,
-  //     'me'
-  //   ]
-  // })
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -56,16 +47,6 @@ const ThoughtForm = () => {
     }
   };
 
-  // const handleRemoveThought = async (thoughtId) => {
-  //   try {
-  //     await removeThought({
-  //       variables: { thoughtId }
-  //     }); 
-  //   } catch {
-  //     console.log(err);
-  //   }
-  // };
-
   return (
     <div>
       <h3>Post Here</h3>
@@ -74,10 +55,10 @@ const ThoughtForm = () => {
         <>
           <p
             className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+              characterCount === 360 || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/280
+            Character Count: {characterCount}/360
           </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
@@ -96,7 +77,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                Publish Post
               </button>
             </div>
             {error && (
