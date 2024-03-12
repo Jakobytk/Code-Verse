@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../utils/mutation';
-
 import Auth from '../utils/auth';
-import './CommentForm.css';
+import './CommentForm.css'; // Import the CSS file
 
 const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
@@ -40,7 +39,7 @@ const CommentForm = ({ thoughtId }) => {
   };
 
   return (
-    <div>
+    <div className="comment-container">
       <h4 className='comment-header'>Comment</h4>
 
       {Auth.loggedIn() ? (
@@ -63,7 +62,6 @@ const CommentForm = ({ thoughtId }) => {
                 placeholder="Add your comment..."
                 value={commentText}
                 className="form-input comment-textarea"
-                style={{ lineHeight: '1.5', resize: 'vertical', height: '100px', width: '800px'}}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -81,10 +79,6 @@ const CommentForm = ({ thoughtId }) => {
           <Link className='logo' to="/login">login</Link> or <Link className='logo' to="/signup">Sign Up.</Link>
         </p>
       )}
-      {/* Container around comments */}
-      <div className="comments-container">
-        {/* Add your comments component here */}
-      </div>
     </div>
   );
 };
