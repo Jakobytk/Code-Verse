@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutation';
-import '../pages/Login.css'
+import './Login.css';
 
 import Auth from '../utils/auth';
 
@@ -71,7 +71,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-primary btn-submit"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

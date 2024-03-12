@@ -1,3 +1,12 @@
 .main-tab {
     min-height: 100vh;
 }
+
+.btn-submit {
+    width: 7%;
+    height: 38px;
+}
+
+.btn-submit:hover {
+    background-color: #ccc;
+}
