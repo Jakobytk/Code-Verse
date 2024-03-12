@@ -3,9 +3,8 @@
    
 } 
 
-.card-header{
-    border: 1px solid #ccc;
+.card-mb-3 {
+    border: 2px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    margin-top: 20px;
 }

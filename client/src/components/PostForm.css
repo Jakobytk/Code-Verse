@@ -1,8 +1,12 @@
 .Login-p {
-    color: black;
+    color: white;
 }
 
 .Login-Link {
-    color: black;
+    color: white;
     
+}
+
+.Login-Link:hover {
+    color: grey;
 }

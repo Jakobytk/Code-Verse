@@ -39,6 +39,7 @@ const CommentForm = ({ thoughtId }) => {
   };
 
   return (
+  <div className='page-height'>
     <div className="comment-container">
       <h4 className='comment-header'>Comment</h4>
 
@@ -80,6 +81,7 @@ const CommentForm = ({ thoughtId }) => {
         </p>
       )}
     </div>
+  </div>
   );
 };
 

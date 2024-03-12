@@ -7,6 +7,8 @@ import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
 
+import './PostPage.css';
+
 const SingleThought = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { thoughtId } = useParams();
@@ -23,10 +25,10 @@ const SingleThought = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="card-header-user">
         {thought.thoughtAuthor} <br />
-        <span style={{ fontSize: '1rem' }}>
-          Posted this on {thought.createdAt}
+        <span style={{ fontSize: '20px', lineHeight: '2rem'}}>
+          Posted {thought.createdAt}
         </span>
       </h3>
       <div className="bg-light py-4">
@@ -34,9 +36,9 @@ const SingleThought = () => {
           className="p-4"
           style={{
             fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
+            fontStyle: '',
+            border: '2px solid #ccc',
+            lineHeight: '2',
           }}
         >
           {thought.thoughtText}
@@ -46,7 +48,7 @@ const SingleThought = () => {
       <div className="my-5">
         <CommentList comments={thought.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="m-3 p-4">
         <CommentForm thoughtId={thought._id} />
       </div>
     </div>
