@@ -1,6 +1,8 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
+import ThoughtForm from '../components/PostForm';
+import ThoughtList from '../components/PostList';
 import CommentForm from '../components/CommentForm';
 import CommentList from '../components/CommentList';
 
@@ -30,7 +32,7 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
+      <h4 className='page-height'>
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
@@ -43,7 +45,16 @@ const Profile = () => {
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-
+        <div>
+           {loading ? (
+              <div>Loading...</div>
+            ) : (
+              <ThoughtList
+                thoughts={user.thoughts}
+                title="Your Posts"
+              />
+            )}
+        </div>
         <div className="col-12 col-md-10 mb-5">
           <CommentList
             thoughts={user.thoughts}
